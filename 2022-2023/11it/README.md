@@ -223,3 +223,48 @@ print(max(min(map(int, input().split(";"))), min(map(int, input().split(";")))))
 ```
 
 </details>
+
+## Задача ЕГЭ 15
+
+Эту задачу почти всегда можно решить через перебор различных вариантов.
+
+## Координатная плоскость
+
+[Задача 17382](https://inf-ege.sdamgia.ru/problem?id=17382). Для какого **наименьшего** целого неотрицательного числа A выражение
+
+$$
+(5x + 3y ≠ 60) ∨ ((A > x) ∧ (A > y))
+$$
+
+тождественно истинно при любых целых неотрицательных x и y?
+
+**Решение**. Решаем с использованием перебора и «лакмусовой бумажки»:
+
+```python
+def f(x, y, A):
+    return ((5 * x + 3 * y != 60) or ((A > x) and (A > y)))
+
+for A in range (0, 100):
+    b = True
+    for x in range (0, 100):
+        for y in range(0, 100):
+            ff = f(x, y, A)
+            if ff == False:
+                b = False
+    if b == True:
+        print(A)
+        break
+```
+
+Более короткое решение:
+
+```python
+for A in range(0, 100):
+    b = True
+    for x in range(0, 100):
+        for y in range(0, 100):
+            b = b and (((5 * x + 3 * y) != 60) or ((A > x) and (A > y)))
+    if b:
+        print(A)
+        break
+```
