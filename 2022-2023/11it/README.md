@@ -204,8 +204,7 @@ print(min_x)  # Вывод: 11
 
 Вывод для примера: `74`.
 
-<details>
-<summary>Решение</summary>
+**Решение.**
 
 ```python
 x1, x2 = map(int, input().split(";"))
@@ -221,8 +220,6 @@ print(max_min)
 ```python
 print(max(min(map(int, input().split(";"))), min(map(int, input().split(";")))))
 ```
-
-</details>
 
 ## Задача ЕГЭ 15
 
