@@ -1,15 +1,5 @@
 # 11 IT класс
 
-## Простые типы данных
-
-```python
-x = 5  # int - целые числа
-second_var = 2.1  # float - вещественные числа
-s = "Петя пришел домой."  # str - строки
-b = True  # bool - логический тип данных (True, False)
-n = None  # Отсутствие значения в переменной
-```
-
 ## Python
 
 - Установка Python: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/install-python/install-python.md>
@@ -20,6 +10,16 @@ n = None  # Отсутствие значения в переменной
 - Сложение двух чисел в Wing Python IDE: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/add-2-num-wing/add-2-num-wing.md>
 - ложение двух чисел в Python через консоль и блокнот: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/add-2-num-python-console/add-2-num-python-console.md>
 - Сложение двух чисел в Thonny на Python: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/add-2-num-thonny/add-2-num-thonny.md>
+
+## Простые типы данных
+
+```python
+x = 5  # int - целые числа
+second_var = 2.1  # float - вещественные числа
+s = "Петя пришел домой."  # str - строки
+b = True  # bool - логический тип данных (True, False)
+n = None  # Отсутствие значения в переменной
+```
 
 ## Преобразования типов данных
 
