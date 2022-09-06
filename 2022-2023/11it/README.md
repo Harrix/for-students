@@ -10,6 +10,17 @@ b = True  # bool - логический тип данных (True, False)
 n = None  # Отсутствие значения в переменной
 ```
 
+## Python
+
+- Установка Python: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/install-python/install-python.md>
+- Установка PyCharm: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/install-pycharm/install-pycharm.md>
+- Сложение двух чисел в Python IDLE: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/add-2-num-python-idle/add-2-num-python-idle.md>
+- Сложение двух чисел в PyCharm: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/add-2-num-pycharm/add-2-num-pycharm.md>
+- Сложение двух чисел в Python на онлайн сервисах: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/add-2-num-python-web/add-2-num-python-web.md>
+- Сложение двух чисел в Wing Python IDE: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/add-2-num-wing/add-2-num-wing.md>
+- ложение двух чисел в Python через консоль и блокнот: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/add-2-num-python-console/add-2-num-python-console.md>
+- Сложение двух чисел в Thonny на Python: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/add-2-num-thonny/add-2-num-thonny.md>
+
 ## Преобразования типов данных
 
 Тип данных выступает в роли функции, которая преобразует значение в указанный тип данных. Например, дан тип данных целых чисел `int`. Значит, функция `int()` будет превращать что-то в целые числа (например, `int(2.1)` вернет `2`).

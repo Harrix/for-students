@@ -4,3 +4,11 @@
 
 - Эта страница [github.com/Harrix/for-students/tree/main/2022-2023/7](https://github.com/Harrix/for-students/tree/main/2022-2023/7)
 - Яндекс Учебник: [education.yandex.ru](https://education.yandex.ru)
+
+## Python
+
+- Установка Python: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/install-python/install-python.md>
+- Установка PyCharm: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/install-pycharm/install-pycharm.md>
+- Сложение двух чисел в Python IDLE: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/add-2-num-python-idle/add-2-num-python-idle.md>
+- Сложение двух чисел в PyCharm: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/add-2-num-pycharm/add-2-num-pycharm.md>
+- Сложение двух чисел в Python на онлайн сервисах: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/add-2-num-python-web/add-2-num-python-web.md>
