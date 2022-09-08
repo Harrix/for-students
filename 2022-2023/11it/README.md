@@ -265,3 +265,69 @@ for A in range(0, 100):
         print(A)
         break
 ```
+
+```py
+a = []
+a = list()
+a = [1, 5, 9, 10, -5]
+b = [2, 6]
+
+# print(a)
+# print(a[0])
+# a[0] = 6
+# print(a)
+# print(a[-1])
+# print(a[1:])
+# print(a[1:3])
+# print(a[1:-1])
+# print(a[1::2])
+# print(a[::-1])
+# d = a
+# d = a.copy()
+# d = a[::]
+# d = a[:]
+# a[0] = 12
+# print(d)
+# a = [1] * 10
+# print(a)
+# a = []
+# for i in range(1, 11):
+#     a.append(i)
+# print(a)
+# a = [i for i in range(1, 11)]
+# print(a)
+a = [1, 5, 9, 10, -5]
+# print(len(a))
+# for x in a:
+#     x = x + 1
+#     print(x)
+# print(a)
+
+# for i in range(len(a)):
+#     a[i] = a[i] + 1
+#     print(a[i])
+# print(a)
+
+# for i in range(len(a)-1, -1, -1):
+#     print(a[i])
+
+a = [1, 5, 5, 10, -5]
+# print(min(a))
+# print(max(a))
+# print(len(a))
+# print(a.count(5))
+# print(a.index(5))
+# print(a.index(55))
+a = [1, 5, 5, 10, -5]
+b = [4, 6]
+# a.extend(b)
+# a = a + b
+# a = a + [5]
+print(a)
+# a = []
+a.insert(0,66)
+print(a)
+del a[0]
+print(a)
+
+```
