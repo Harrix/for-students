@@ -32,7 +32,6 @@ Notion поддерживает ввод формул a формате $LaTeX$. 
 - Сложение двух чисел в Python через консоль и блокнот: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/add-2-num-python-console/add-2-num-python-console.md>
 - Сложение двух чисел в Thonny на Python: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/add-2-num-thonny/add-2-num-thonny.md>
 
-
 ## Списки (массивы)
 
 ### Создание списка
