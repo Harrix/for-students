@@ -144,6 +144,39 @@ b = True  # bool - логический тип данных (True, False)
 n = None  # Отсутствие значения в переменной
 ```
 
+## Преобразования типов данных
+
+Тип данных выступает в роли функции, которая преобразует значение в указанный тип данных. Например, дан тип данных целых чисел `int`. Значит, функция `int()` будет превращать что-то в целые числа (например, `int(2.1)` вернет `2`).
+
+```python
+y = int(2.1)  # Значение: 2
+y2 = int(True)  # Значение: 1
+y3 = bool(1)  # Значение: True
+```
+
+```py
+print(bool(10))  # Вывод: True
+print(bool(-10))  # Вывод: True
+print(bool("False"))  # Вывод: True
+print(bool(""))  # Вывод: False
+print(bool(None))  # Вывод: False
+print(int(None))  # Вывод: TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+print(int("Петя"))  # Вывод: ValueError: invalid literal for int() with base 10: 'Петя'
+print(int("78"))  # Вывод: 78
+print(int(input()) + 1)  # Вывод: 78
+```
+
+`bool(0)`, `bool("")`, `bool(None)`, `bool(False)` дадут `False`. Остальные значения простых типов данных для `bool()` дадут `True`. На этом основана проверка пустой строки:
+
+```python
+if bool(s):
+  ...
+  # Строка s не пустая
+if s:
+  ...
+  # Строка s не пустая
+```
+
 ## Списки (массивы)
 
 ### Создание списка
