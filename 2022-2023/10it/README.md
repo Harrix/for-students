@@ -21,7 +21,14 @@ Notion поддерживает ввод формул a формате $LaTeX$. 
 - <https://latexeditor.lagrida.com>
 - <http://www.hostmath.com>
 
-## Python
+## Сервисы
+
+- <https://habr.com/ru/all/>: главный сайт русскоговорящих айтишников
+- <https://feedly.com/>: для работы с RSS
+- <https://ticktick.com/>: списки дел (пользуюсь сам, но платный)
+- <https://todo.microsoft.com/tasks/>: списки дел (бесплатно)
+
+## Установка Python
 
 - Установка Python: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/install-python/install-python.md>
 - Установка PyCharm: <https://github.com/Harrix/harrix.dev-blog-2021/blob/main/install-pycharm/install-pycharm.md>
@@ -281,6 +288,220 @@ print((x - 1) % 2)  # 2 способ
 print(int(not (x % 2)))  # 3 способ
 ```
 
+## Условия
+
+TODO
+
+```python
+# x = int(input())
+# if x > 4:
+#     print("Родители вас не ругают!")
+# elif x < 0:
+#     print("Вы не правильно взломали дневник")
+# else:
+#     print("Вам не повезло!")
+
+x = int(input())
+y = int(input())
+if (x > 0) and (y > 0):
+    pass
+    ...
+if x > 0 and y > 0:
+    pass
+    ...
+
+if x > 0 or y > 0:
+    pass
+
+if x > 0: # > < <= >= == !=
+    ...
+# if x = 0: так нельзя
+```
+
+Тернарный оператор
+
+```python
+x = 2
+print("Да" if x % 2 == 0 else "Нет")
+t = "Да" if x % 2 == 0 else "Нет"
+if x % 2 == 0:
+    t = "Да"
+else:
+    t = "Нет"
+print(t)
+```
+
+## Оформление текста в консоли
+
+TODO
+
+Спецсимволы:
+
+\n перенос на новую строку
+\t табуляция
+\r перенос каретки
+
+Прогресс бар:
+
+```python
+from time import sleep
+
+for i in range(100 + 1):
+    print(f"\x1b[34m\r{i}\x1b[0m", end="")
+    sleep(0.25)
+for i in range(100+1):
+    n = i // 10
+    # s = ""
+    # for j in range(n):
+    #     s += "="
+    s = "="*n + "-"*(10-n)
+    print(s)
+
+[--------------------] 0%
+[=-------------------] 0%
+[====================] 100%
+```
+
+Цветной текст:
+
+```python
+print("\x1b[0m Normal \x1b[0m")
+print("\x1b[31m Red foreground\x1b[0m")
+print("\x1b[32m Green foreground\x1b[0m")
+print("\x1b[33m Yellow foreground\x1b[0m")
+print("\x1b[34m Blue foreground\x1b[0m")
+print("\x1b[35m Magenta foreground\x1b[0m")
+print("\x1b[36m Cyan foreground\x1b[0m")
+print("\x1b[41m Red background\x1b[0m")
+print("\x1b[42m Green background\x1b[0m")
+print("\x1b[43m Yellow background\x1b[0m")
+print("\x1b[44m Blue background\x1b[0m")
+print("\x1b[45m Magenta background\x1b[0m")
+print("\x1b[46m Cyan background\x1b[0m")
+print("\x1b[3m Italic \x1b[0m")
+print("\x1b[4m Underline \x1b[0m")
+print("\x1b[9m Crossed-out \x1b[0m")
+```
+
+## Оператор морж
+
+TODO
+
+Только с Python 3.10:
+
+```python
+print(str((a := input())[:1]) + '0'*(len(a)-1))
+```
+
+## Перемена значений местами (swap)
+
+TODO
+
+```python
+a = 2
+b = 3
+a, b = b, a
+a, b, c = 5, 6, 9
+
+a2 = a
+b2 = b
+a = b2
+b = a2
+print(a, b)
+
+c = b
+b = a
+a = c
+print(a, b)
+a = a + b
+b = a - b
+a = a - b
+print(a, b)
+
+a = a * b
+b = a // b
+a = a // b
+print(a, b)
+```
+
+## Циклы
+
+TODO
+
+```python
+for i in range(1, 10):
+    print("Ученик №")
+    print(i)
+    if i == 5:
+        print("Караул!!!")
+        continue
+    print("получает 2 \n")
+
+for i in range(1, 10):
+    print(i)
+    if i == 5:
+        break
+else:
+    print("Ура!!")
+
+for i in range(1, 10 + 1):
+    print(i)
+
+i = 0
+while i < 10 + 1:
+    print(i)
+    i += 1
+
+x = int(input())
+while x < 0:
+    print("Ввел не то")
+    x = int(input())
+
+x = int(input())
+x = 123
+s = 0
+s += x % 10
+x = x // 10
+s += x % 10
+x = x // 10
+s += x % 10
+x = x // 10
+print(s)
+
+x = 123
+s = 0
+while x > 0:
+    s += x % 10
+    x = x // 10
+print(s)
+
+x = 12311 # int(input())
+s = 0
+while x > 0:
+    if x % 10 == 1:
+        s += 1
+    x = x // 10
+print(s)
+
+n = int(input())
+n1 = 0
+n2 = n
+i = 0
+while n % 10 == 0:
+    n //= 10
+i = 0
+while n > 0:
+    i += 1
+    n //= 10
+n = n2
+while n > 0:
+    n1 += (n % 10) * 10 ** i
+    i -= 1
+    n //= 10
+print(n1)
+print(n2 - n1)
+```
+
 ## Списки (массивы)
 
 ### Создание списка
@@ -498,4 +719,288 @@ print(a)   # Вывод: [66, 4, 6, 5, 7]
 # Удаление первого элемента массива
 del a[0]
 print(a)   # Вывод: [4, 6, 5, 7]
+```
+
+## Алгоритмы с массивами
+
+### Минимальный элемент
+
+TODO
+
+```python
+a = [5, 9, 7, 2, 3]
+m = a[0]
+for i in range(1, len(a)):
+    if a[i] < m:
+        m = a[i]
+print(m)
+```
+
+## Предмаксимальный элемент
+
+TODO
+
+Код с ошибками.
+
+```python
+a = [9,9,3]
+if len(a) == 0:
+    print(None)
+elif len(a) == 1:
+    print(a[0])
+else:
+    max_elem = None
+    prev_max_elem = None
+    for elem in a:
+        if max_elem is None:
+            max_elem = elem
+        else:
+            if elem > max_elem:
+                prev_max_elem = max_elem
+                max_elem = elem
+            else:
+                if prev_max_elem is None and elem != max_elem:
+                    prev_max_elem = elem
+                else:
+                    if elem > prev_max_elem:
+                        prev_max_elem = elem
+print(prev_max_elem)
+```
+
+## Словари
+
+TODO
+
+```python
+a = [10, -5, 6]
+b = ["milk", "butter"]
+print(a[0])
+print(b[0])
+a.append(42)
+print(a)
+for x in a:
+    print(x)
+
+# map
+# dict
+
+a_dict = {"first": 10, "second": -5, "third": 6}
+b_dict = {"Холодильник": "milk", "Шкаф": "butter"}
+print(a_dict["first"])
+print(b_dict["Холодильник"])
+a_dict["boom"] = 8888
+print(a_dict)
+print(len(a_dict))
+# for x in a_dict:
+#     print(x)
+
+a_dict = {"Вася": 140, "Петя": 140, "Катя": 246}
+max_height = 0
+max_name = ""
+for key, value in a_dict.items():
+    if value > max_height:
+        max_height = value
+        max_name = key
+print(max_name)
+
+# d = {"first": 10, "second": 20}
+# d = {"first": [99, 10], "second": [1, 20]}
+
+n = int(input())
+d = dict()
+for _ in range(n):
+    lst = input().split()
+    name = lst[0]
+    price = int(lst[1])
+    if name in d:
+        d[name].append(price)
+    else:
+        d[name] = [price]
+print(d)
+for key, value in d.items():
+    d[key] = sum(d[key])
+print(d)
+
+```
+
+## Системы счисления в Python
+
+TODO
+
+```python
+# x = int("42", 8)
+# print(x)
+# print(int("FF", 16))
+# print(int("101110", 2))
+print(bin(5)[2:])
+print(oct(42)[2:])
+print(hex(42)[2:].count("1"))
+
+# x = 4 ** 511 + 2 ** 511 - 511
+# print(bin(x)[2:].count("0"))
+
+x = 0o42
+print(x)
+x = 0xff00ff
+print(x)
+x = 0b10010
+print(x)
+```
+
+## Функции
+
+TODO
+
+```python
+def discriminant(a3, b3, c3):
+    d = b3 ** 2 - 4 * a3 * c3
+    return d
+
+def plus1(x):
+    return x + 1
+
+def print_hello():
+    print("Hello")
+    return
+
+print(plus1(6))
+
+t = print_hello()
+print(t)
+
+a, b, c = 5, 6, 1
+
+d = discriminant(a, b, c)
+print(d)
+
+a2, b2, c2 = 6, 22, 1
+d = discriminant(a2,b2,c2)
+print(d)
+
+print(discriminant(3,4,3))
+
+def even(x):
+    if x % 2 == 0:
+        return True
+    return False
+
+
+def minimum(a, b, c, d):
+    m = a
+    if b < m:
+        m = b
+    if c < m:
+        m = c
+    if d < m:
+        m = d
+    return m
+```
+
+## ООП
+
+TODO
+
+Простой класс
+
+```python
+class Human:
+    def __init__(self):
+        self.name = ""
+        self.height = 56
+        self.surname=""
+        self.iq = 1
+        self.eye_color = ""
+
+bezdar = Human()
+bezdar.name = "Антон"
+print(bezdar.name)
+arina = Human()
+arina.height = 152
+arina.surname = "dshdfk"
+print(arina.name)
+print(arina.height)
+```
+
+Класс с методами:
+
+```python
+class Player:
+    def __init__(self):
+        self.name = "Smith"
+        self.lives = 5
+        self.hungry = 100
+        self.bag = []
+
+    def eat_mushroom(self):
+        self.lives += 1
+
+    def die(self):
+        self.lives -= 1
+
+    def eat_pie(self):
+        self.hungry += 10
+
+    def add_item(self, item):
+        self.bag.append(item)
+
+    def eat_mushroom_from_bag(self):
+        if "mushroom" in self.bag:
+            self.eat_mushroom()
+            self.bag.remove("mushroom")
+        else:
+            print("Упс... А грибов то не осталось...")
+
+p = Player()
+p.eat_mushroom()
+p.eat_mushroom()
+p.die()
+p.add_item("mushroom")
+p.add_item("mushroom")
+p.eat_mushroom_from_bag()
+print(p.lives)
+print(p.bag)
+```
+
+Связь между классами:
+
+```python
+class Human:
+    def __init__(self, name):
+        self.name = name
+        self.children = []
+
+    def add_child(self, child):
+        if child is not self:
+            self.children.append(child)
+
+vasya = Human("Вася")
+oleg = Human("Олег")
+vasya.add_child(oleg)
+oleg.add_parent(vasya)
+
+print(vasya.child.name)
+print(oleg.parent.name)
+```
+
+## Текстовой квест
+
+TODO
+
+Простейший вариант (так не делать):
+
+```python
+print("Коля рискнул включить песню на уроке. "
+      "Зря он это сделал...")
+print("Что сделал учитель?")
+print("1. Поставил 5 за урок.")
+print("2. Выкинул учебник из окна.")
+print("3. Мудро промолчал.")
+n = input("Введите номер ответа АБ: ")
+if "1" in n:
+    print("Учителя уволили за халтуру. Конец")
+elif "2" in n:
+    print("Учитель вернулся в поселок
+          "в глубокой тайге ")
+    print("1. увидел медведя")
+    print("2. Медведь увидел АБ и притащил выброшенный учебник.")
 ```
