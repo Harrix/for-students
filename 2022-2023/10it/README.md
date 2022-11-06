@@ -9,7 +9,7 @@
 
 Главный сервис заметок на 2022:
 
-- [Notion](https://www.notion.so/).
+- [Notion](https://www.notion.so/)
 
 Видеоуроки по Notion:
 
