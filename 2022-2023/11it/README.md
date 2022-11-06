@@ -663,3 +663,35 @@ for A in range(0, 100):
         print(A)
         break
 ```
+
+#### [Задача 15955](https://inf-ege.sdamgia.ru/problem?id=15955)
+
+На числовой прямой задан отрезок A. Известно, что формула
+
+$$
+((x ∈ A) → (x2 ≤ 81)) ∧ ((y2 ≤ 36) → (y ∈ A))
+$$
+
+тождественно истинна при любых вещественных x и y. Какую наименьшую длину может иметь отрезок A?
+
+**Решение**. Решаем с использованием перебора:
+
+```python
+lst = []
+for a1 in range(-20, 20):
+    print("a1 =", a1)
+    for a2 in range(a1, 20):
+        A = a2 - a1
+        b = True
+        for x in range(-20, 20):
+            for y in range(-20, 20):
+                ff = ((a1 <= x <= a2) <= (x**2 <= 81)) and ((y**2 <= 36) <= (a1 <= y <= a2))
+                if ff == False:
+                    b = False
+                    break
+            if b == False:
+                break
+        if b == True:
+            lst.append(A)
+print(min(lst))
+```
