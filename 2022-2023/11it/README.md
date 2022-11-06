@@ -692,13 +692,13 @@ for a1 in range(-20, 20):
         b = True
         for x in range(-20, 20):
             for y in range(-20, 20):
-                ff = ((a1 <= x <= a2) <= (x**2 <= 81)) and ((y**2 <= 36) <= (a1 <= y <= a2))
-                if ff == False:
+                ff = ((a1 <= x <= a2) <= (x ** 2 <= 81)) and ((y ** 2 <= 36) <= (a1 <= y <= a2))
+                if not ff:
                     b = False
                     break
-            if b == False:
+            if not b:
                 break
-        if b == True:
+        if b:
             lst.append(A)
 print(min(lst))
 ```
