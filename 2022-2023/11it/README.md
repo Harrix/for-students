@@ -664,6 +664,13 @@ for A in range(0, 100):
         break
 ```
 
+<details>
+<summary>Ответ</summary>
+
+21
+
+</details>
+
 #### [Задача 15955](https://inf-ege.sdamgia.ru/problem?id=15955)
 
 На числовой прямой задан отрезок A. Известно, что формула
@@ -695,3 +702,10 @@ for a1 in range(-20, 20):
             lst.append(A)
 print(min(lst))
 ```
+
+<details>
+<summary>Ответ</summary>
+
+12
+
+</details>
